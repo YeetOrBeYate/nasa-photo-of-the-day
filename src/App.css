@@ -36,16 +36,23 @@
   margin: 0 auto;
   width: 70%;
   border: 1px solid black;
-  display: flex;
-  flex-wrap: wrap;
+  background: black;
+  
 }
 
-.card{
+.cardyB{
   margin: 0 auto;
   border: 1px solid black;
   width: 70%;
 }
 
-img{
-  width: 70%;
+.subby{
+  background: red;
 }
+
+img{
+  width: 50%;
+  margin-bottom: 5%;
+}
+
+

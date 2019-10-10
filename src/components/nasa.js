@@ -2,6 +2,8 @@ import React,{useState,useEffect} from "react";
 import axios from "axios";
 import {MakeCard} from "../components/nasaCard";
 import {Kyle} from "../data/data";
+import { Spinner } from 'reactstrap';
+import { Button } from 'reactstrap';
 
 export default function CreateCard(){
     
@@ -19,7 +21,9 @@ export default function CreateCard(){
 
     if(!nasa){
         return(
-            <h1>loading...</h1>
+            <div>
+                <Spinner color = "info" />
+            </div>
         );
     }
 
@@ -33,7 +37,6 @@ export default function CreateCard(){
                 });
                 
         }
-        
         document.querySelector('.select').classList.toggle('hasValue');
         console.log("toggling");
     }
@@ -46,12 +49,11 @@ export default function CreateCard(){
             <select className = "select">
             {setTimeout(addSelect,1000)}
             </select>
-            <button onClick = {()=>setYear(document.querySelector('.select').value)}>Submit!</button>
+            <Button color="info" onClick = {()=>setYear(document.querySelector('.select').value)}>Submit!</Button>
 
              <div className = "cardHolder">
-            <MakeCard img = {nasa.hdurl} copyright = {nasa.copyright} explanation = {nasa.explanation} title = {nasa.title} date = {nasa.date}/>
+                <MakeCard img = {nasa.hdurl} copyright = {nasa.copyright} explanation = {nasa.explanation} title = {nasa.title} date = {nasa.date}/>
             </div>
         </div>
-       
     );
 }
