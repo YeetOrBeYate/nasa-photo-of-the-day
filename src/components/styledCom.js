@@ -10,5 +10,5 @@ export const CardHolder = styled.div`
 `;
 
 export const MenuHolder = styled.div`
-    position:fixed;
+    width: 100vw;
 `;
