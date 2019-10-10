@@ -4,6 +4,9 @@ import {MakeCard} from "../components/nasaCard";
 import {Kyle} from "../data/data";
 import { Spinner } from 'reactstrap';
 import { Button } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
+import {CardHolder,MenuHolder} from "../components/styledCom";
+
 
 export default function CreateCard(){
     
@@ -45,15 +48,21 @@ export default function CreateCard(){
     return(
         
         <div>
-            <label>Please select years:</label>
-            <select className = "select">
-            {setTimeout(addSelect,1000)}
-            </select>
-            <Button color="info" onClick = {()=>setYear(document.querySelector('.select').value)}>Submit!</Button>
-
-             <div className = "cardHolder">
+            <Row>
+                <Col sm={{size:6,order:2,offset:3}}>
+                    <label className = "text-warning">Please select year:</label>
+                    <select className = "select">
+                    {setTimeout(addSelect,1000)}
+                    </select>
+                    <Button color="warning" onClick = {()=>setYear(document.querySelector('.select').value)}>Submit!</Button>
+                </Col>
+            </Row>
+             <CardHolder>
                 <MakeCard img = {nasa.hdurl} copyright = {nasa.copyright} explanation = {nasa.explanation} title = {nasa.title} date = {nasa.date}/>
-            </div>
+            </CardHolder>
+            <Row>
+
+            </Row>
         </div>
     );
 }

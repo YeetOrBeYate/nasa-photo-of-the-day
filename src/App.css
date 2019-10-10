@@ -32,26 +32,25 @@
   }
 }
 
-.cardHolder{
-  margin: 0 auto;
-  width: 70%;
-  border: 1px solid black;
-  background: black;
-  
-}
 
 .cardyB{
   margin: 0 auto;
-  border: 1px solid black;
-  width: 70%;
+  /* border: 1px solid black; */
+  width: 40%;
+  height: 10%;
+  background: #0B3D91;
+  color:#ffc107;
 }
 
-.subby{
-  background: red;
+.row{
+  margin: 0;
+  width: 100vw;
+  background: #0B3D91;
 }
+
 
 img{
-  width: 50%;
+  width: 10%;
   margin-bottom: 5%;
 }
 

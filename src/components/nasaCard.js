@@ -5,21 +5,19 @@ import {
   } from 'reactstrap';
 export const MakeCard = (props)=>{
     return (
-    <div className = "subby">
-        <Card>
-        <CardTitle><big>{props.title}</big></CardTitle>
-        <CardSubtitle className = "text-info">Date: {props.date}</CardSubtitle>
+    <div>
+        <CardTitle className = "text-warning"><big>{props.title}</big></CardTitle>
+        <CardSubtitle className = "text-warning"><big>Date: {props.date}</big></CardSubtitle>
           <CardBody className = "cardyB">
             <CardImg top width="100%" src={props.img} alt="Card image cap" />
             {
                 props.copyright ?
-                    <CardSubtitle> Artist: {props.copyright}</CardSubtitle>
+                    <CardSubtitle><big>Artist: {props.copyright}</big></CardSubtitle>
                     :
-                    <CardSubtitle>Artist not available</CardSubtitle>
+                    <CardSubtitle><big>Artist not available</big></CardSubtitle>
             }
             <CardText>{props.explanation}</CardText>
           </CardBody>
-        </Card>
     </div>
     );
 }
